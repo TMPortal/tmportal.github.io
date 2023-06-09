@@ -1,0 +1,442 @@
+/* global style goes here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+
+:root {
+    --primary-btn-bg: #c90450;
+    --primary-btn-text: #fff;
+    --primary-btn-bg-hover: #fff;
+    --primary-btn-text-hover: #c90450;
+    --primary-btn-pressed-bg: #6d002a;
+    --primary-btn-pressed-text: #c90450;
+    --secondary-btn-bg: #fff;
+    --secondary-btn-text: #c90450;
+    --secondary-btn-bg-hover: #c90450;
+    --secondary-btn-text-hover: #fff;
+    --secondary-btn-pressed-bg: #6d002a;
+    --secondary-btn-pressed-text: rgba(0, 0, 0, 0.5);
+
+    --padding-x-xl: 2rem;
+}
+
+* {
+    font-family: "Roboto", sans-serif, "Helvetica Neue";
+    transition: all 250ms;
+}
+
+html {
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #f7f2f1;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 700;
+}
+
+h4 {
+    font-style: normal;
+    font-weight: 700;
+}
+
+p {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+}
+
+p.subtitle {
+    font-style: normal;
+    font-weight: 500;
+}
+
+a {
+    color: #c90450;
+    text-decoration: none;
+}
+
+/* external link color */
+a[href]:not(:where(
+  /* exclude hash only links */
+  [href^="#"],
+  /* exclude relative but not double slash only links */
+  [href^="/"]:not([href^="//"]),
+  /* domains to exclude */
+  [href*="//transgendermediaportal.org"],
+)) {
+    color: #066a9f;
+}
+
+.primary-btn {
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-text);
+    border-radius: 25px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    padding: 1rem 1.5rem;
+    transition: all linear 0.1s;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-btn-bg-hover);
+    color: var(--primary-btn-text-hover);
+}
+
+.primary-btn:focus {
+    box-shadow: 0px 0px 10px #d63f09, 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.primary-btn:active {
+    background-color: var(--primary-btn-pressed-bg);
+    color: var(--primary-btn-pressed-text);
+}
+
+.primary-btn .icon {
+    margin-left: 0.5rem;
+}
+
+.secondary-btn {
+    background-color: var(--secondary-btn-bg);
+    color: var(--secondary-btn-text);
+    border: 2px solid #c90450;
+    border-radius: 25px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    padding: 1em 1.5em;
+    transition: all linear 0.1s;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.secondary-btn:hover {
+    background-color: var(--secondary-btn-bg-hover);
+    color: var(--secondary-btn-text-hover);
+}
+
+.secondary-btn:focus {
+    box-shadow: 0px 0px 10px #d63f09, 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.secondary-btn:active {
+    background-color: var(--secondary-btn-pressed-bg);
+    color: var(--primary-btn-pressed-text);
+}
+
+.secondary-btn .icon {
+    margin-left: 0.5rem;
+}
+
+/* from Figma */
+
+.hero-image {
+    height: 600px;
+    width: 1920px;
+    opacity: 50%;
+    background: #000000;
+}
+
+/* box's shadow */
+div.static {
+    background: #ffffff;
+    box-shadow: 0px 2px 10px rgba(156, 156, 156, 0.302);
+}
+
+h1.static {
+    text-align: center;
+    font-size: 80px;
+    line-height: 94px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2.static {
+    font-size: 41px;
+    line-height: 48px;
+    color: #d63f09;
+}
+
+h3.static {
+    font-size: 31px;
+    line-height: 36px;
+    color: #341e16;
+}
+
+h4.static {
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+p.subtitle.static {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+p.static {
+    font-family: "Roboto";
+    font-size: 24px;
+    line-height: 36px;
+    color: #222222;
+}
+
+p.caption {
+    font-family: "Roboto Mono";
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    color: #222222;
+}
+
+p.blockquote.static {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #918784;
+    text-indent: 25px;
+    border-left-style: solid;
+    border-width: 2px;
+    border-color: #d63f09;
+}
+/* .blockcite and .blockquote need to be nested together 
+ so the left border doesn't break between them */
+p.blockcite.static {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #341e16;
+}
+
+/* end figma paste */
+
+#featured {
+    position: relative;
+}
+
+#featured img {
+    width: 100%;
+}
+
+#featured article {
+    position: absolute;
+    right: 20%;
+    bottom: 35%;
+    width: min(90%, 480px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 10px;
+}
+
+#featured article h2 {
+    width: 100%;
+    text-align: left;
+    font-size: 2rem;
+    color: #fff;
+}
+
+#featured article p {
+    font-family: "Roboto";
+    font-weight: 700;
+    width: 100%;
+    font-size: 1.25rem;
+    text-align: left;
+    color: #fff;
+}
+
+#feature- #breadcrumbs {
+    margin: 0 2em;
+    padding: 2em 4em;
+}
+
+#media-container,
+#people-container,
+#people-container-single {
+    margin: 0 2em;
+    padding: 0 4em 2em 4em;
+}
+
+#media-container .media-row,
+#people-container .people-row,
+#people-container-single .people-row {
+    display: flex;
+    background: white;
+    padding: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#media-container .media-row .media-pic,
+#people-container .people-row .people-pic {
+    padding: 0 1em 0 0;
+}
+
+#media-container .media-row .media-info #title,
+#people-container .people-row .people-info #name,
+#people-container-single .people-row .people-info #name {
+    color: #c90450;
+}
+
+#people-container-single {
+    display: flex;
+}
+
+#people-container-single .sidebar {
+    width: 25%;
+    background: white;
+    margin-right: 15px;
+}
+
+#people-container-single .sidebar .people-pic img {
+    width: 100%;
+}
+
+#people-container-single .people-row {
+    width: 75%;
+}
+
+/* special CSS */
+fieldset {
+    border: none;
+}
+fieldset:hover .ssDescCheckboxList {
+    display: block;
+    /* border: none; */
+}
+
+ul.ssDescCheckboxList {
+    display: none;
+}
+
+ul.ssDescCheckboxList li:hover {
+    background: black;
+    color: white;
+}
+
+#staticSearch #ssForm {
+    width: 25%;
+    float: left;
+}
+
+#ssResults {
+    width: 75%;
+    float: left;
+}
+
+#ssPoweredBy {
+    width: 100%;
+}
+/* end special CSS */
+
+section.cta {
+    padding: 1rem var(--padding-x-xl) 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.cta h4 {
+    font-size: 1.5rem;
+}
+
+section#filmmaker-highlights,
+section#decades {
+    margin: 0 1.5rem 2rem;
+}
+
+.card {
+    filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.25));
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+.card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #f2ece9;
+    padding: 1.5rem;
+}
+
+.card main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 0.5rem;
+    padding: 1.5rem;
+}
+
+.card main a.mainpage-thumbnail {
+    position: relative;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card main a.mainpage-thumbnail img {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 250ms ease-in-out;
+}
+
+.card main a.mainpage-thumbnail:hover img {
+    transform: scale(1.1);
+}
+
+.card main a.mainpage-thumbnail .overlay {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.card main a.mainpage-thumbnail p {
+    color: #fff;
+    font-weight: 700;
+    z-index: 11;
+    font-family: "Roboto Condensed";
+    font-size: 1.5rem;
+}
+
+.card main a.mainpage-thumbnail:hover p {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+@media (min-width: 578px) {
+    nav {
+    }
+
+    #main-menu .masthead .search {
+    }
+}

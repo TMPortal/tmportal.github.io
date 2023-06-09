@@ -1,0 +1,203 @@
+/* global header styles goes here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+header {
+    --primary-bg: #c90450;
+    --secondary-bg: #fff;
+    --primary-text: #fff;
+    --secondary-text: #c90450;
+    background: linear-gradient(180deg, #d63f09 0%, var(--primary-bg) 100%);
+}
+
+#main-menu {
+    display: flex;
+    padding: 2.5em 2em 2em 2em;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#main-menu .nav-browse {
+    --radius: 1em;
+    --w: 12rem;
+    position: relative;
+}
+
+#main-menu .nav-browse ul li a span {
+    display: inline;
+    margin-right: 0.75em;
+}
+
+#main-menu .nav-browse ul li .first {
+    display: block;
+}
+
+#main-menu .search {
+    flex-grow: 1;
+    border-radius: 1rem;
+    background-color: #ffffffe1;
+    display: flex;
+    align-items: center;
+    padding: 0.1rem 0.75rem;
+    margin: 0 2.75rem 0 1.25rem;
+    height: 32px;
+}
+
+#main-menu .search input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+#main-menu .search button {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+#main-menu .support button {
+    color: var(--secondary-text);
+    background-color: var(--secondary-bg);
+    border: 2px solid var(--secondary-bg);
+    border-radius: 1.25rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    padding: 0.35rem 0.75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.25));
+    font-weight: 700;
+}
+
+#main-menu .browse button {
+    color: var(--primary-text);
+    background-color: var(--primary-bg);
+    border: 2px solid var(--primary-text);
+    border-radius: 1.25rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    padding: 0.35rem 0.75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* For navigation */
+
+/* * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #555;
+  }
+  
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  } */
+
+.navigation {
+    background: linear-gradient(180deg, #d63f09 0%, var(--primary-bg) 100%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    overflow: hidden;
+    transition: left 0.3s;
+    width: 100%;
+    z-index: 100;
+    padding-top: 2em;
+}
+
+.navigation p,
+.navigation p a {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    z-index: 101;
+    font-weight: bold;
+}
+
+.navigation p a {
+    display: block;
+    font-size: 40px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navigation p a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 101;
+}
+
+.toggle-button .wolverine {
+    display: inline-block;
+    height: 26px;
+    padding: 0px 0px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    opacity: 0.97;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.toggle-button .wolverine span {
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 0px;
+    width: 0px;
+    overflow: hidden;
+}
+
+.nav-control {
+    position: absolute;
+    left: -9999px;
+    width: 100%;
+    clip: rect(0, 0, 0, 0);
+}
+
+.nav-control:checked ~ .navigation {
+    left: 0;
+    opacity: 1;
+    transition: left 0.3s, opacity 0.3s;
+}
+
+.nav-control:checked ~ .navigation ul li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.nav-control:checked ~ .toggle-button .wolverine .claws {
+    -webkit-transition: all 0.1s 0s;
+    -webkit-transition-delay: ease;
+    -moz-transition: all 0.1s 0s ease;
+    -o-transition: all 0.1s 0s ease;
+    transition: all 0.1s 0s ease;
+    background: transparent !important;
+    z-index: 101;
+}
